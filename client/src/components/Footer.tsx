@@ -16,22 +16,22 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/">
-                  <a className="text-gray-300 hover:text-white transition-colors">Home</a>
+                  <div className="text-gray-300 hover:text-white transition-colors cursor-pointer">Home</div>
                 </Link>
               </li>
               <li>
                 <Link href="/products">
-                  <a className="text-gray-300 hover:text-white transition-colors">Products</a>
+                  <div className="text-gray-300 hover:text-white transition-colors cursor-pointer">Products</div>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="text-gray-300 hover:text-white transition-colors">About Us</a>
+                  <div className="text-gray-300 hover:text-white transition-colors cursor-pointer">About Us</div>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="text-gray-300 hover:text-white transition-colors">Contact</a>
+                  <div className="text-gray-300 hover:text-white transition-colors cursor-pointer">Contact</div>
                 </Link>
               </li>
             </ul>
