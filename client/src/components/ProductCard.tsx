@@ -10,17 +10,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [imageExists, setImageExists] = useState(false);
   const { id, name, description, type, category, color, price } = product;
   
+  // Track the extension that succeeded
+  const [imageExtension, setImageExtension] = useState<string | null>(null);
+  
   // Check if the image exists
   useEffect(() => {
     const checkImage = async () => {
       try {
         // Check for various image extensions
-        const extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+        const extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'svg'];
         
         for (const ext of extensions) {
           const exists = await checkImageExists(`${name}.${ext}`);
           if (exists) {
             setImageExists(true);
+            setImageExtension(ext);
             break;
           }
         }
@@ -47,17 +51,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div className="product-card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative">
         <div className="aspect-w-3 aspect-h-4 bg-gray-100 flex items-center justify-center h-64">
-          {imageExists ? (
+          {imageExists && imageExtension ? (
             <img 
-              src={`/${name}.jpg`} 
+              src={`/${name}.${imageExtension}`}
               alt={name} 
               className="object-cover w-full h-full"
-              onError={() => setImageExists(false)}
+              onError={() => {
+                setImageExists(false);
+                setImageExtension(null);
+              }}
             />
           ) : (
             <div className="flex flex-col items-center justify-center p-4">
               <i className={`fas ${type === 'clothing' ? 'fa-tshirt' : 'fa-spray-can'} text-4xl text-gray-300`}></i>
-              <p className="text-gray-400 mt-2 text-sm text-center">Image will appear when "{name}.jpg" is uploaded</p>
+              <p className="text-gray-400 mt-2 text-sm text-center">Image will appear when image file is uploaded</p>
             </div>
           )}
         </div>
