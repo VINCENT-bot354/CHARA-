@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="product-card bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative">
         <div className="aspect-w-3 aspect-h-4 bg-gray-100 flex items-center justify-center h-64">
           {imageExists ? (
@@ -61,21 +61,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
           )}
         </div>
-        <span className={`absolute top-2 right-2 ${badgeColor} text-white text-xs px-2 py-1 rounded`}>
+        <span className={`absolute top-2 right-2 ${badgeColor} text-white text-xs px-2 py-1 rounded-md`}>
           {badgeText}
         </span>
         {price && (
-          <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
+          <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-md">
             KSh {price}
           </span>
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-heading font-semibold text-lg text-black">{name}</h3>
-        <p className="text-black text-sm mt-1">{description}</p>
+        <h3 className="font-heading font-semibold text-lg">{name}</h3>
+        <p className="text-sm mt-1">{description}</p>
         <div className="mt-3 flex items-center">
-          <span className="text-xs bg-gray-100 text-black px-2 py-1 rounded mr-2">{category}</span>
-          <span className="text-xs bg-gray-100 text-black px-2 py-1 rounded">{color}</span>
+          <span className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-md mr-2">{category}</span>
+          <span className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-md">{color}</span>
         </div>
         
         <div className="mt-4">
@@ -83,7 +83,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             href={createWhatsAppLink()} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition duration-300"
+            className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition duration-300"
           >
             <i className="fab fa-whatsapp mr-2"></i> Order Now
           </a>
