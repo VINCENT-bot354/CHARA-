@@ -24,11 +24,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-wrap items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center cursor-pointer">
+          <div className="flex items-center cursor-pointer">
+            <Link href="/">
               <Logo />
-            </a>
-          </Link>
+            </Link>
+          </div>
 
           {/* Navigation for desktop */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -43,24 +43,24 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
               </button>
               <div className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md ${isDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} transition duration-300 z-50`}>
                 <Link href="/">
-                  <a className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-t-md ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-t-md ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
                     Home
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/products">
-                  <a className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
                     Products
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/about">
-                  <a className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
                     About Us
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/contact">
-                  <a className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-b-md ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-b-md ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
                     Contact
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -86,24 +86,24 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
         {/* Mobile Navigation */}
         <div className={`md:hidden mt-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <Link href="/">
-            <a onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
               Home
-            </a>
+            </div>
           </Link>
           <Link href="/products">
-            <a onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
               Products
-            </a>
+            </div>
           </Link>
           <Link href="/about">
-            <a onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
               About Us
-            </a>
+            </div>
           </Link>
           <Link href="/contact">
-            <a onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
               Contact
-            </a>
+            </div>
           </Link>
         </div>
       </div>

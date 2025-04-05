@@ -18,7 +18,7 @@ const Products: React.FC = () => {
       result = result.filter(product => product.type === filterType);
     }
     
-    // Filter by search term
+    // Filter by search term from URL parameter
     if (searchTerm) {
       const term = searchTerm.toLowerCase().trim();
       result = result.filter(product => 
@@ -40,8 +40,12 @@ const Products: React.FC = () => {
   
   // Clear search
   const clearSearch = () => {
-    // Reset global search term
-    globalThis.searchContext.setGlobalSearchTerm('');
+    // Reset global search term by updating URL
+    const url = new URL(window.location.href);
+    url.searchParams.delete('search');
+    window.history.pushState({}, '', url);
+    // Reload page to refresh search results
+    window.location.reload();
   };
   
   return (

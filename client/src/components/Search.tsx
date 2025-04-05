@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { useGlobalSearch } from '../hooks/useSearch';
 
 const Search: React.FC = () => {
   const { searchTerm: globalSearchTerm, setGlobalSearchTerm } = useGlobalSearch();
   const [localSearchTerm, setLocalSearchTerm] = useState(globalSearchTerm);
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
+
+  // Update local search term when global search term changes
+  useEffect(() => {
+    setLocalSearchTerm(globalSearchTerm);
+  }, [globalSearchTerm]);
 
   // Navigate to products page when searching
   const handleSearch = (e: React.FormEvent) => {
@@ -13,7 +18,7 @@ const Search: React.FC = () => {
     setGlobalSearchTerm(localSearchTerm);
     
     if (location !== '/products') {
-      window.location.href = '/products';
+      navigate('/products');
     }
   };
 
