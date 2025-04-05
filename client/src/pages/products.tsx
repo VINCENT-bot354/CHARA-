@@ -23,7 +23,6 @@ const Products: React.FC = () => {
       const term = searchTerm.toLowerCase().trim();
       result = result.filter(product => 
         product.name.toLowerCase().includes(term) ||
-        product.description.toLowerCase().includes(term) ||
         product.color.toLowerCase().includes(term) ||
         product.category.toLowerCase().includes(term)
       );

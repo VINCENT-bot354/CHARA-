@@ -16,9 +16,9 @@ const Home: React.FC = () => {
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Elegance in Every Stitch. Luxury in Every Scent.</h1>
             <p className="text-lg mb-8">Discover our exquisite collection of garments and fragrances crafted to elevate your everyday experience.</p>
             <Link href="/products">
-              <a className="inline-block bg-secondary text-dark px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition duration-300">
+              <div className="inline-block bg-secondary text-dark px-6 py-3 rounded-full font-semibold hover:bg-secondary/80 transition duration-300 cursor-pointer">
                 Shop Now
-              </a>
+              </div>
             </Link>
           </div>
         </div>
@@ -38,9 +38,9 @@ const Home: React.FC = () => {
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">
               <Link href="/products">
-                <a className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold">
+                <div className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold cursor-pointer">
                   Explore Collection
-                </a>
+                </div>
               </Link>
             </div>
           </div>
@@ -55,9 +55,9 @@ const Home: React.FC = () => {
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">
               <Link href="/products">
-                <a className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold">
+                <div className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold cursor-pointer">
                   Explore Collection
-                </a>
+                </div>
               </Link>
             </div>
           </div>
@@ -72,9 +72,9 @@ const Home: React.FC = () => {
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">
               <Link href="/products">
-                <a className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold">
+                <div className="inline-block bg-secondary text-dark px-4 py-2 rounded-full font-semibold cursor-pointer">
                   Explore Collection
-                </a>
+                </div>
               </Link>
             </div>
           </div>
