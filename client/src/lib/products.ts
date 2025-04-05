@@ -9,12 +9,12 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  { id: 1, name: "Mara", description: "Elegant red dress with floral patterns", type: "clothing", category: "dress", color: "red", price: "3,500" },
-  { id: 2, name: "Pluto", description: "Deep blue perfume with musky undertones", type: "perfume", category: "fragrance", color: "blue", price: "2,800" },
-  { id: 3, name: "Kenya", description: "Vibrant green safari jacket", type: "clothing", category: "jacket", color: "green", price: "4,200" },
-  { id: 4, name: "Serengeti", description: "Warm amber perfume with exotic notes", type: "perfume", category: "fragrance", color: "amber", price: "3,200" },
-  { id: 5, name: "Amazon", description: "Tropical print casual wear shirt", type: "clothing", category: "shirt", color: "multicolor", price: "1,800" },
-  { id: 6, name: "Nile", description: "Fresh aquatic blue perfume", type: "perfume", category: "fragrance", color: "blue", price: "2,500" },
+  { id: 1, name: "Mara", description: "Elegant red dress with floral patterns", type: "clothing", category: "dress", color: "red" },
+  { id: 2, name: "Pluto", description: "Deep blue perfume with musky undertones", type: "perfume", category: "fragrance", color: "blue" },
+  { id: 3, name: "Kenya", description: "Vibrant green safari jacket", type: "clothing", category: "jacket", color: "green" },
+  { id: 4, name: "Serengeti", description: "Warm amber perfume with exotic notes", type: "perfume", category: "fragrance", color: "amber" },
+  { id: 5, name: "Amazon", description: "Tropical print casual wear shirt", type: "clothing", category: "shirt", color: "multicolor" },
+  { id: 6, name: "Nile", description: "Fresh aquatic blue perfume", type: "perfume", category: "fragrance", color: "blue" },
   { id: 7, name: "Everest", description: "White snow jacket for extreme cold", type: "clothing", category: "jacket", color: "white" },
   { id: 8, name: "Venus", description: "Romantic pink floral perfume", type: "perfume", category: "fragrance", color: "pink" },
   { id: 9, name: "Mars", description: "Bold red casual t-shirt", type: "clothing", category: "shirt", color: "red" },
