@@ -49,106 +49,108 @@
   }
 }
 
-/* Dark mode specific overrides - Elegant & Professional version */
+/* Dark mode with pure black background and white text */
 .dark-mode {
-  background-color: #1a1c25;
-  color: #e2e8f0;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .dark-mode header {
-  background-color: #171923;
+  background-color: #000000;
   color: #ffffff;
-  border-bottom: 1px solid #2d3748;
+  border-bottom: 1px solid #333333;
 }
 
 .dark-mode footer {
-  background-color: #171923;
-  color: #cbd5e0;
-  border-top: 1px solid #2d3748;
+  background-color: #000000;
+  color: #ffffff;
+  border-top: 1px solid #333333;
 }
 
 .dark-mode .bg-white {
-  background-color: #252836;
+  background-color: #121212;
 }
 
-.dark-mode .text-dark {
-  color: #e2e8f0;
+.dark-mode .text-dark,
+.dark-mode .text-gray-800,
+.dark-mode .text-gray-600,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode span {
+  color: #ffffff;
 }
 
 .dark-mode .shadow-md {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .border-gray-200 {
-  border-color: #2d3748;
-}
-
-.dark-mode .text-gray-800 {
-  color: #e2e8f0;
-}
-
-.dark-mode .text-gray-600 {
-  color: #a0aec0;
+  border-color: #333333;
 }
 
 .dark-mode .hover\:bg-light:hover {
-  background-color: #2d3748;
+  background-color: #333333;
 }
 
 /* Card styling in dark mode */
 .dark-mode .product-card {
-  background-color: #252836;
-  border: 1px solid #2d3748;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #121212;
+  border: 1px solid #333333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .product-card:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Product image placeholder in dark mode */
 .dark-mode .aspect-w-3 {
-  background-color: #2d3748;
+  background-color: #1a1a1a;
 }
 
 .dark-mode .text-gray-300,
 .dark-mode .text-gray-400 {
-  color: #718096;
+  color: #cccccc;
 }
 
 /* Product tags in dark mode */
 .dark-mode .bg-gray-100 {
-  background-color: #2d3748;
-  color: #e2e8f0;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 /* Button styling in dark mode */
 .dark-mode button:not(.bg-primary):not(.bg-secondary):not(.bg-green-600) {
-  background-color: #2d3748;
-  color: #e2e8f0;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 .dark-mode button:hover:not(.bg-primary):not(.bg-secondary):not(.bg-green-600) {
-  background-color: #3d4a63;
+  background-color: #444444;
 }
 
 /* Dialog styling for settings */
 .dark-mode [role="dialog"] {
-  background-color: #252836;
-  border-color: #2d3748;
+  background-color: #121212;
+  border-color: #333333;
 }
 
 /* Search bar styling */
 .dark-mode input[type="text"],
 .dark-mode input[type="search"] {
-  background-color: #2d3748;
-  color: #e2e8f0;
-  border-color: #4a5568;
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #444444;
 }
 
 .dark-mode input[type="text"]::placeholder,
 .dark-mode input[type="search"]::placeholder {
-  color: #718096;
+  color: #aaaaaa;
 }
 
 /* Make sure the green button stays green in dark mode */
@@ -158,6 +160,24 @@
 
 .dark-mode .bg-green-600:hover {
   background-color: #2f855a;
+}
+
+/* Additional selectors to ensure all text is white in dark mode */
+.dark-mode .text-black {
+  color: #ffffff !important;
+}
+
+.dark-mode a:not(.bg-green-600) {
+  color: #38b2ac;
+}
+
+/* Radio buttons in settings */
+.dark-mode [type="radio"] {
+  background-color: #333333;
+}
+
+.dark-mode [type="radio"]:checked {
+  background-color: #38b2ac;
 }
 
 /* Font size overrides */

@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
           <nav className="hidden md:flex items-center space-x-6">
             <div className="relative group">
               <button 
-                className="flex items-center text-dark hover:text-primary transition duration-300"
+                className="flex items-center hover:text-primary transition duration-300"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 onBlur={() => setTimeout(() => setIsDropdownOpen(false), 100)}
               >
@@ -44,22 +44,22 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
               </button>
               <div className={`absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md ${isDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} transition duration-300 z-50`}>
                 <Link href="/">
-                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-t-md ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-primary rounded-t-md ${currentPath === '/' ? 'text-primary font-semibold' : ''}`}>
                     Home
                   </div>
                 </Link>
                 <Link href="/products">
-                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : ''}`}>
                     Products
                   </div>
                 </Link>
                 <Link href="/about">
-                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : ''}`}>
                     About Us
                   </div>
                 </Link>
                 <Link href="/contact">
-                  <div className={`block px-4 py-2 text-sm hover:bg-light hover:text-primary rounded-b-md ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
+                  <div className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:text-primary rounded-b-md ${currentPath === '/contact' ? 'text-primary font-semibold' : ''}`}>
                     Contact
                   </div>
                 </Link>
@@ -76,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-dark hover:text-primary"
+              className="hover:text-primary"
               aria-label="Toggle mobile menu"
             >
               <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
@@ -92,27 +92,27 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
         {/* Mobile Navigation */}
         <div className={`md:hidden mt-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <Link href="/">
-            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/' ? 'text-primary font-semibold' : ''}`}>
               Home
             </div>
           </Link>
           <Link href="/products">
-            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/products' ? 'text-primary font-semibold' : ''}`}>
               Products
             </div>
           </Link>
           <Link href="/about">
-            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/about' ? 'text-primary font-semibold' : ''}`}>
               About Us
             </div>
           </Link>
           <Link href="/contact">
-            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/contact' ? 'text-primary font-semibold' : 'text-dark'}`}>
+            <div onClick={closeMobileMenu} className={`block py-2 hover:text-primary ${currentPath === '/contact' ? 'text-primary font-semibold' : ''}`}>
               Contact
             </div>
           </Link>
           <div className="flex items-center py-2">
-            <span className="text-dark mr-2">Settings</span>
+            <span className="mr-2">Settings</span>
             <Settings />
           </div>
         </div>
