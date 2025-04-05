@@ -9,7 +9,7 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  { id: 1, name: "Mara", description: "Elegant red dress with floral patterns", type: "clothing", category: "dress", color: "red" },
+  { id: 1, name: "Mara", description: "Elegant red dress with floral patterns", type: "clothing", category: "dress", color: "red", price: "KSH 400 "},
   { id: 2, name: "Pluto", description: "Deep blue perfume with musky undertones", type: "perfume", category: "fragrance", color: "blue" },
   { id: 3, name: "Kenya", description: "Vibrant green safari jacket", type: "clothing", category: "jacket", color: "green" },
   { id: 4, name: "Serengeti", description: "Warm amber perfume with exotic notes", type: "perfume", category: "fragrance", color: "amber" },

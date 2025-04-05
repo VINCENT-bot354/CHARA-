@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'wouter';
 import Logo from './Logo';
 import Search from './Search';
+import Settings from './Settings';
 
 interface NavbarProps {
   currentPath: string;
@@ -64,6 +65,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
                 </Link>
               </div>
             </div>
+            
+            {/* Settings button */}
+            <div className="flex items-center">
+              <Settings />
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -105,6 +111,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPath }) => {
               Contact
             </div>
           </Link>
+          <div className="flex items-center py-2">
+            <span className="text-dark mr-2">Settings</span>
+            <Settings />
+          </div>
         </div>
       </div>
     </header>
