@@ -33,7 +33,7 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-primary/20">
               <div className="text-center p-4">
                 <h3 className="font-heading text-2xl font-bold text-dark">Luxury Clothing</h3>
-                <p className="text-dark/80 mt-2">Discover timeless elegance</p>
+                <p className="text-black mt-2">Discover timeless elegance</p>
               </div>
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-primary/20">
               <div className="text-center p-4">
                 <h3 className="font-heading text-2xl font-bold text-dark">Signature Fragrances</h3>
-                <p className="text-dark/80 mt-2">Captivate with our scents</p>
+                <p className="text-black mt-2">Captivate with our scents</p>
               </div>
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-primary/20">
               <div className="text-center p-4">
                 <h3 className="font-heading text-2xl font-bold text-dark">Seasonal Essentials</h3>
-                <p className="text-dark/80 mt-2">Stay on trend year-round</p>
+                <p className="text-black mt-2">Stay on trend year-round</p>
               </div>
             </div>
             <div className="absolute bottom-4 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition duration-300">

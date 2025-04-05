@@ -71,11 +71,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-heading font-semibold text-lg">{name}</h3>
-        <p className="text-gray-600 text-sm mt-1">{description}</p>
+        <h3 className="font-heading font-semibold text-lg text-black">{name}</h3>
+        <p className="text-black text-sm mt-1">{description}</p>
         <div className="mt-3 flex items-center">
-          <span className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded mr-2">{category}</span>
-          <span className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">{color}</span>
+          <span className="text-xs bg-gray-100 text-black px-2 py-1 rounded mr-2">{category}</span>
+          <span className="text-xs bg-gray-100 text-black px-2 py-1 rounded">{color}</span>
         </div>
         
         <div className="mt-4">
